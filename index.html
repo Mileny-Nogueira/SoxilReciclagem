@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>Soxil</title>
+</head>
+<body>
+    <header class="efeitoTemaHeader">
+        <nav id="container-burguer">
+            <input type="checkbox" class="menu-faketrigger" onclick="clickMenu()">
+            <div class="menu-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="menu">
+                <li><a href="index.html" target="_self">HOME</a></li>
+                <li><a href="servicos.html" target="_self">SERVIÇOS</a></li>
+                <li><a href="pgrs.html" target="_self">PGRS</a></li>
+                <li><a href="contato.html" target="_self">CONTATO</a></li>
+            </ul>
+        </nav>  
+        <img id="logo" src="img/logo.png" alt="logo da empresa Soxil Comércio de Reciclados">
+        <ul id="menuPc">
+            <li><a href="#">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="pgrs.html">PGRS</a></li>
+            <li><a href="contato.html" style="color: #F1F1F1">Contato</a></li>
+        </ul>
+        <div id="acess">
+            <button class="temaEscuro"><img src="img/tema.png" alt="botão para mudar o tema do header e footer"></button>
+            <!--
+                <button><img src="img/daltonicos.png" alt=""></button>
+                <button><img src="img/textoMaior.png" alt=""></button>
+            -->
+        </div>
+    </header>
+    <section id="sobre">
+        <a href="https://wa.me/message/7B2MYZCZ4Q4TJ1"><img id="whats" src="img/fixedWhats.png" alt="Clique aqui para mandar uma mensagem no Whatsapp"></a>
+        <h1>Temos ampla experiência com gestão de resíduos sólidos</h1>
+        <p>Nascemos com o olhar voltado para o futuro. Somos a prova que desenvolvimento sustentável não é apenas uma ideia, é uma realidade. Criamos oportunidades, quebramos paradigmas e sempre ofertamos soluções inovadoras.</p>
+        <a href="servicos.html" id="btnSaberMais">Conheça os nossos serviços</a>
+        <img class="caminhao" src="img/caminhao.png" alt="imagem de caminhão de reciclagem">
+    </section>
+    <section id="alicerces">
+        <div id="boxAlicerces">
+            <div class="flip" id="card1">
+                <div class="face front">
+                    <img src="img/missao.png" alt="ícone que simboliza a missão da Soxil">
+                    <h2>Missão</h2>
+                </div>
+                <div class="face back">
+                    <p>Colaborar com o desenvolvimento do setor de reciclagem visando que cada vez mais materiais sejam reciclados, diminuindo assim a quantidade de resíduos descartados e respeitando o meio ambiente.</p>
+                </div>
+            </div>
+            <div class="flip" id="card2">
+                <div class="face front">
+                    <img src="img/visao.png" alt="ícone que simboliza a visão da Soxil">
+                    <h2>Visão</h2>
+                </div>
+                <div class="face back">
+                    <p>Ser reconhecido pela excelência no descarte correto dos materiais através de práticas sustentáveis alinhadas com a Agenda 2030.  </p>
+                </div>
+            </div>
+            <div class="flip" id="card3">
+                <div class="face front">
+                    <img src="img/valores.png" alt="ícone que simboliza os valores da Soxil">
+                    <h2>Valores</h2>
+                </div>
+                <div class="face back">
+                    <p>Sustentabilidade, ética, responsabilidade social, transparência, respeito, empatia, humildade, honestidade, integridade, flexibilidade e inovação.</p>
+                </div>
+            </div>
+        </div>
+        <div id="boxAlicerces02">
+            <h2>Missão</h2>
+            <p>Colaborar com o desenvolvimento do setor de reciclagem visando que cada vez mais materiais sejam reciclados, diminuindo assim a quantidade de resíduos descartados e respeitando o meio ambiente.</p>
+            <h2>Visão</h2>
+            <p>Ser reconhecido pela excelência no descarte correto dos materiais através de práticas sustentáveis alinhadas com a Agenda 2030.</p>
+            <h2>Valores</h2>
+            <p>Sustentabilidade, ética, responsabilidade social, transparência, respeito, empatia, humildade, honestidade, integridade, flexibilidade e inovação.</p>
+        </div>
+    </section>
+    <footer class="efeitoTemaFooter">
+        <div id="redesSociais">
+            <a href=""><img src="img/twitter.png"></a>
+            <a href=""><img src="img/whatsapp.png"></a>
+            <a href=""><img src="img/facebook.png"></a>
+            <a href=""><img src="img/linkedin.png"></a>
+        </div>
+        <div id="logoDev">
+            <img src="img/leet.png" alt="logo da empresa que desenvolveu o site (Mileny Nogueira Nascimento - Leet)">
+        </div>
+        <p>Copyright - &copy; 2023 - All Rights Reserved - Soxil</p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/tema.js"></script>
+</body>
+</html>

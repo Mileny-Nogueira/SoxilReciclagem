@@ -1,0 +1,473 @@
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('fontes/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('fontes/Poppins/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: 'Poppins Extra Bold';
+    src: url('fontes/Poppins/Poppins-ExtraBold.ttf');
+}
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    font-family: Poppins Bold;
+    scroll-behavior: smooth;
+}
+
+/*SCROLL*/
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: #1E1E1E;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #F1F1F1;
+    border-radius: 20px;
+    border: 3px solid #F1F1F1;
+}
+/*MENU HAMBURGUER*/
+#container-burguer{
+    display: none;
+}
+.menu-lines{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.menu-lines span{
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background-color: #57CC99;
+    transition: all ease .2s;
+}
+
+.menu-faketrigger{
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+}
+
+.menu-faketrigger:checked~.menu-lines span:nth-child(1){
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scale(1.2);
+}
+.menu-faketrigger:checked~.menu-lines span:nth-child(2){
+    opacity: 0;
+}
+.menu-faketrigger:checked~.menu-lines span:nth-child(3){
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scale(1.2);
+}
+
+#menu{
+    position: absolute;
+    height: auto;
+    width: 200px;
+    top: 60px;
+    left: 0;
+    background-color: #F1F1F1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+#menu a{
+    color: #57CC99;
+    width: 300px;
+    text-align: center;
+    
+}
+
+#menu li{
+    width: 200px;
+    text-align: center;
+    margin: 0;
+    height: 60px; 
+}
+
+/*HEADER*/
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: ease .6s;
+}
+#logo{
+    margin-left: 50px;
+}
+
+#menuPc li{
+    list-style: none;
+    float: left;
+    margin-right: 30px ;
+}
+
+#menuPc a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #57CC99;
+    transition: all ease .5s;
+}
+
+#menuPc a:hover{
+    color: #22577A;
+    transition: all ease .5s;
+}
+
+#menuPc li:nth-child(4){
+    background-color: #57CC99;
+    border-radius: 40px;
+    padding: 2px 6px; 
+    transition: all ease .5s;
+}
+
+#menuPc li:nth-child(4):hover{
+    background-color: #22577A;
+    transition: all ease .5s;
+}
+
+#acess{
+    margin-right: 50px; 
+}
+
+#acess button{
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    float: left;
+    background-color: #57CC99;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    margin: 0 3px;
+}
+
+.efeitoTemaHeader.active{
+    background-color: #1E1E1E;
+    transition: ease .6s;
+}
+
+.efeitoTemaFooter.active{
+    background-color: #1E1E1E;
+    transition: ease .6s;
+}
+
+/*SECTION 1 - Sobre*/
+#sobre{
+    height: 400px;
+    background-color: #57CC99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sobre h1{
+    font-family: Poppins Extra Bold;
+    margin-top: 100px;
+    font-size: 30px;
+    width: 55%;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color: #22577A;
+}
+
+#sobre p{
+    font-size: 20px;
+    font-weight: bold;
+    width: 50%;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color: #F1F1F1;
+}
+
+#btnSaberMais{
+    background-color: #22577A;
+    color: #F1F1F1;
+    font-weight: bold;
+    width: 240px;
+    margin-left: 50px;
+    border-radius: 40px;
+    padding: 8px 10px;
+    transition: all ease .5s;
+}
+
+#btnSaberMais:hover{
+    transform: scale(1.1);
+    transition: all ease .5s;
+}
+
+#whats{
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*SECTION 2 - Alicerces*/
+#alicerces{
+    background-image: url('img/backgroundAlicerces.png');
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caminhao{
+    width: 317px;
+    height: 150px;
+    position: absolute;
+    transform: translate(300%, 145%);
+    visibility: hidden;
+}
+
+#boxAlicerces{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 200px;
+}
+#boxAlicerces02{
+    display: none;
+}
+
+.face{
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #F1F1F1;
+    position: absolute;
+    z-index: 0;
+   
+}
+
+.front{
+    background-color: #57CC99;
+    font-size: 25px;
+    transform: rotateY(180deg);
+}
+
+.back{
+    background-color: #006338;
+    backface-visibility: hidden;
+}
+
+.back p{
+    padding: 0 20px;
+    text-align: center;
+    font-family: Poppins Regular;
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+#card1, #card2, #card3{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all 1s;
+}
+
+/*FOOTER*/
+footer{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F1F1F1;
+    transition: ease .6s;
+}
+
+#redesSociais{
+    margin-left: 50px;
+    height: 40px;
+}
+
+footer p{
+    font-size: 10px;
+    color: #57CC99;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 514px){
+    header ul{
+        display: none;
+    }
+    #logo{
+        margin: 0;
+    }
+    #acess{
+        margin: 0;
+    }
+    #container-burguer{
+        display: block;
+    }
+    header{
+        display: flex;
+        justify-content: space-around;
+    }
+    #sobre h1{
+        font-size: 20px;
+        width: 80%;
+    }
+    #sobre p{
+        font-size: 15px;
+        width: 80%;
+    }
+    #btnSaberMais{
+        font-size: 15px;
+        padding: 8px;
+        text-align: center;
+    }
+    #alicerces{
+        height: auto;
+    }
+    #boxAlicerces{
+        display: none;
+    }
+    #boxAlicerces02{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 200px 0 100px 0;
+        padding: 0 10px;
+    }
+    #boxAlicerces02 h2{
+        font-size: 25px;
+        background-color: #1E1E1E;
+        padding: 2px 6px;
+        border-radius: 50px;
+        color: #57CC99;
+        margin-top: 50px;
+    }
+    #boxAlicerces02 p{
+        background-color: #57CC99;
+        color: #1E1E1E;
+        font-size: 20px;
+        padding: 2px 6px;
+        border-radius: 10px;
+    }
+    footer, #redesSociais{
+        margin: 0;
+        justify-content: center;
+    }
+    footer p, #logoDev, .caminhao{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 515px) and (max-width: 800px){
+    header ul{
+        display: none;
+    }
+    #logo{
+        margin: 0;
+    }
+    #acess{
+        margin: 0;
+    }
+    #container-burguer{
+        display: block;
+    }
+    header{
+        display: flex;
+        justify-content: space-around;
+    }
+    #sobre{
+        padding: 10px;
+    }
+    #sobre h1{
+        margin: 0;
+        margin-top: 100px;
+        font-size: 25px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #sobre p{
+        margin: 0;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #btnSaberMais{
+        font-size: 15px;
+        width: 240px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .caminhao{
+        transform: translate(72%, 180%);
+    }
+    #alicerces{
+        height: auto;
+    }
+    #boxAlicerces{
+        display: none;
+    }
+    #boxAlicerces02{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 200px 0 100px 0;
+        padding: 0 10px;
+    }
+    #boxAlicerces02 h2{
+        font-size: 25px;
+        background-color: #1E1E1E;
+        padding: 2px 6px;
+        border-radius: 50px;
+        color: #57CC99;
+        margin-bottom: 20px;
+    }
+    #boxAlicerces02 p{
+        background-color: #57CC99;
+        color: #1E1E1E;
+        font-size: 20px;
+        padding: 2px 6px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    #logoDev{
+        display: none;
+    }
+}

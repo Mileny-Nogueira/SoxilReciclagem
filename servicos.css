@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('fontes/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('fontes/Poppins/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: 'Poppins Extra Bold';
+    src: url('fontes/Poppins/Poppins-ExtraBold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    font-family: Poppins Bold;
+    scroll-behavior: smooth;
+}
+/*SCROLL*/
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: #1E1E1E;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #F1F1F1;
+    border-radius: 20px;
+    border: 3px solid #F1F1F1;
+}
+
+/*MENU HAMBURGUER*/
+#container-burguer{
+    display: none;
+}
+.menu-lines{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.menu-lines span{
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background-color: #57CC99;
+    transition: all ease .2s;
+}
+
+.menu-faketrigger{
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+}
+
+.menu-faketrigger:checked~.menu-lines span:nth-child(1){
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scale(1.2);
+}
+.menu-faketrigger:checked~.menu-lines span:nth-child(2){
+    opacity: 0;
+}
+.menu-faketrigger:checked~.menu-lines span:nth-child(3){
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scale(1.2);
+}
+
+#menu{
+    position: absolute;
+    height: auto;
+    width: 200px;
+    top: 60px;
+    left: 0;
+    background-color: #F1F1F1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+#menu a{
+    color: #57CC99;
+    width: 300px;
+    text-align: center;
+    
+}
+
+#menu li{
+    width: 200px;
+    text-align: center;
+    margin: 0;
+    height: 60px; 
+}
+
+/*HEADER*/
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: ease .6s;
+}
+#logo{
+    margin-left: 50px;
+}
+
+#menuPc li{
+    list-style: none;
+    float: left;
+    margin-right: 30px ;
+}
+
+#menuPc a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #57CC99;
+    transition: all ease .5s;
+}
+
+#menuPc a:hover{
+    color: #22577A;
+    transition: all ease .5s;
+}
+
+#menuPc li:nth-child(4){
+    background-color: #57CC99;
+    border-radius: 40px;
+    padding: 2px 6px; 
+    transition: all ease .5s;
+}
+
+#menuPc li:nth-child(4):hover{
+    background-color: #22577A;
+    transition: all ease .5s;
+}
+
+#acess{
+    margin-right: 50px; 
+}
+
+#acess button{
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    float: left;
+    background-color: #57CC99;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    margin: 0 3px;
+}
+.efeitoTemaHeader.active{
+    background-color: #1E1E1E;
+    transition: ease .6s;
+}
+
+.efeitoTemaFooter.active{
+    background-color: #1E1E1E;
+    transition: ease .6s;
+}
+
+#whats{
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 1;
+}
+/*Section Serviços*/
+section#img01{
+    background-image: url(img/img01.png);
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 6px 6px 13px 0 rgba(0, 0, 0, 0.47);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section#img02{
+    background-image: url(img/img02.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*Section Title*/
+.title{
+    width: 100%;
+    height: 300px;
+    background-color: #F1F1F1;
+    margin: 200px 0 300px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/*Section Content*/
+.content{
+    width: 100%;
+    height: auto;
+    background-color: #F1F1F1; 
+}
+
+section#img02 .content{
+    margin-bottom: 300px;
+}
+
+.title div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#servicos h1{
+    font-size: 30px;
+    font-family: Poppins Bold;
+    color: #22577A;
+    text-align: center;
+}
+
+#servicos h2{
+    font-size: 30px;
+    font-family: Poppins Regular;
+    font-weight: 400;
+    text-align: center;
+    color: #22577A;
+}
+#servicos h3{
+    font-size: 20px;
+    font-family: Poppins Regular;
+    font-weight: 400;
+    color: #22577A;
+    max-width: 400px;
+    text-align: center;
+}
+
+#servicos p{
+  font-size: 25px;
+  font-family: Poppins Regular;
+  color: #22577A;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0 50px 0;
+
+}
+
+/*FOOTER*/
+footer{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F1F1F1;
+    transition: ease .6s;
+}
+
+#redesSociais{
+    margin-left: 50px;
+    height: 40px;
+}
+
+footer p{
+    font-size: 10px;
+    color: #57CC99;
+    margin-right: 50px;
+}
+
+
+@media screen and (max-width: 514px){
+    header ul{
+        display: none;
+    }
+    #logo{
+        margin: 0;
+    }
+    #acess{
+        margin: 0;
+    }
+    #container-burguer{
+        display: block;
+    }
+    header{
+        display: flex;
+        justify-content: space-around;
+    }
+    footer, #redesSociais{
+        margin: 0;
+        justify-content: center;
+    }
+    footer p, #logoDev, .caminhao{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 515px) and (max-width: 800px){
+    header ul{
+        display: none;
+    }
+    #logo{
+        margin: 0;
+    }
+    #acess{
+        margin: 0;
+    }
+    #container-burguer{
+        display: block;
+    }
+    header{
+        display: flex;
+        justify-content: space-around;
+    }
+    #logoDev{
+        display: none;
+    }
+}
