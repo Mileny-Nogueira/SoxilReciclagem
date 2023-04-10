@@ -16,4 +16,5 @@ Desenvolver um site para um comerciante local ou empresa de pequeno porte.
 
 <ul>
   <li>Protótipo: <a href="https://www.figma.com/file/93BnOpcVezXuaWZgzbCKzD/Untitled?node-id=0%3A1&t=zNfQ44Ami0JqlslD-1" target="_blank">CLIQUE AQUI!<a></li>
+  <li>Vercel: <a href="https://soxil-reciclagem.vercel.app/">CLIQUE AQUI!</a></li>
 </ul>
